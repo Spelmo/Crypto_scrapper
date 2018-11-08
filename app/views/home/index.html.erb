@@ -1,0 +1,17 @@
+<div class="center jumbotron">
+  <h1>Trouve le cours de la crypto de ton choix</h1>
+<br>
+
+
+<%= form_for :scrap do |f| %>
+
+  <div class="form-group">
+    <%= f.label "Crypto" %>
+    <%= select_tag "value", options_for_select(@hash.each{|i| [i[0], i[1]]})%>
+  </div>
+
+      </div>
+  <div class="actions">
+    <%= f.submit "Rechercher", class: "btn btn-primary" %>
+  </div>
+<% end %>
